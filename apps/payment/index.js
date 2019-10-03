@@ -1,4 +1,4 @@
-import defaultConfig, { APP_ENV } from '../../defaults/config';
+import defaultConfig, { DEPLOY_ENV } from '../../defaults/config';
 
 const environments = {
   development: {
@@ -73,7 +73,7 @@ const environments = {
 
 export const config = {
   ...defaultConfig,
-  ...environments[APP_ENV],
+  ...environments[DEPLOY_ENV],
 }
 
 export { default as plugins } from '../../defaults/plugins';

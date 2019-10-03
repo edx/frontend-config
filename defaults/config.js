@@ -1,3 +1,6 @@
+export const DEPLOY_ENV = process.env.DEPLOY_ENV;
+export const NODE_ENV = process.env.NODE_ENV;
+
 const environments = {
   development: {
     // URLs
@@ -94,8 +97,8 @@ const environments = {
 }
 
 const env = {
-  ...environments[APP_ENV],
-  APP_ENV,
+  ...environments[DEPLOY_ENV],
+  DEPLOY_ENV,
   NODE_ENV,
 }
 
