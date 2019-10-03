@@ -4,7 +4,9 @@
 
 This repo is a template for frontend configuration libraries.
 
-A frontend configuration library is intended to be used with an NPM alias during the build process to replace references to frontend-config (this repository).  Because of this, having a standardized interface for loading config information is important.  We could provide a utility to validate it, perhaps, if it becomes painful.
+A frontend configuration library is intended to be used with an NPM alias during the build process to replace references to frontend-config (this repository).  The application then imports `config` and `plugins` from this repo and uses it to configure itself.
+
+Because of this, having a standardized interface for loading config information is important.  We could provide a utility to validate it, perhaps, if it becomes painful.
 
 ## NODE_ENV and APP_ENV
 
