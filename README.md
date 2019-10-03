@@ -26,7 +26,9 @@ A Frontend Config must contain a directory called `apps` with subdirectories for
 
 ## apps/<APP_NAME>/index.js
 
-An application-specific subdirectory must include an index.js file.  This file must provide two exports.
+An application-specific subdirectory must include an index.js file.  Because application subdirectories are imported directly by the app, the other subdirectories will be tree-shaken out of the build, along with any dependencies (i.e., plugins like a header or footer) they may depend on.  
+
+This file must provide two exports.
 
 ### config
 
