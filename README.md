@@ -75,3 +75,23 @@ The plugin configuration must be an Object of the following shape:
 ## apps/<APP_NAME>/index.scss
 
 An application-specific subdirectory must include an index.scss file, representing CSS overrides (a CSS theme).  The file may be empty, but it must exist.
+
+# Important Notes
+
+This method of configuration does not fully replace our environment variable configuration that's currently in use.  
+
+There are some env vars that are used specifically by the build process, and in theory there could be some that are private.  There are also two environment variables needed _by_ this method.
+
+Some examples:
+
+- APPLE_DEVELOPER_MERCHANT_ID_DOMAIN_ASSOCIATION - used in build process for payment
+- BASE_URL - used by webpack (duplicated here)
+- NEW_RELIC_APP_ID - used by webpack
+- NEW_RELIC_LICENSE_KEY - used by webpack
+- NEW_RELIC_ADMIN_KEY - used by webpack... weirdly I don't see it set anywhere.
+- NODE_ENV
+- DEPLOY_ENV - _new_ and informs this repo what deploy environment the code is for - staging or production.
+
+There are also many environment variables not covered by this repo that are used by other micro-frontends.  Presumably they'd need to be added here as those MFEs are configured via this method.
+
+- CURRENCY_COOKIE_NAME - used by payment... not set anywhere?
