@@ -1,4 +1,4 @@
-# frontend-config
+# frontend-config (THIS REPO IS A WORK IN PROGRESS - IT IS NOT IN USE YET)
 
 # Getting Started
 
