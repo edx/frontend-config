@@ -50,26 +50,26 @@ const environments = {
   },
   staging: {
     // URLs
-    CREDENTIALS_BASE_URL: "https://credentials.stage.example.com",
-    ECOMMERCE_BASE_URL: "https://ecommerce.stage.example.com",
-    LMS_BASE_URL: "https://courses.stage.example.com",
-    LOGIN_URL: "https://courses.stage.example.com/login",
-    LOGOUT_URL: "https://courses.stage.example.com/logout",
-    MARKETING_SITE_BASE_URL: "https://stage.example.com",
-    ORDER_HISTORY_URL: "https://orders.stage.example.com/orders",
-    SUPPORT_URL: "https://support.example.com",
-    REFRESH_ACCESS_TOKEN_ENDPOINT: "https://courses.stage.example.com/login_refresh",
+    CREDENTIALS_BASE_URL: 'https://credentials.stage.example.com',
+    ECOMMERCE_BASE_URL: 'https://ecommerce.stage.example.com',
+    LMS_BASE_URL: 'https://courses.stage.example.com',
+    LOGIN_URL: 'https://courses.stage.example.com/login',
+    LOGOUT_URL: 'https://courses.stage.example.com/logout',
+    MARKETING_SITE_BASE_URL: 'https://stage.example.com',
+    ORDER_HISTORY_URL: 'https://orders.stage.example.com/orders',
+    SUPPORT_URL: 'https://support.example.com',
+    REFRESH_ACCESS_TOKEN_ENDPOINT: 'https://courses.stage.example.com/login_refresh',
 
     // Misc
-    SITE_NAME: "edX",
+    SITE_NAME: 'edX',
 
     // Paths
-    CSRF_TOKEN_API_PATH: "/csrf/api/v1/token",
+    CSRF_TOKEN_API_PATH: '/csrf/api/v1/token',
 
     // Cookie names
-    ACCESS_TOKEN_COOKIE_NAME: "stage-edx-jwt-cookie-header-payload",
-    LANGUAGE_PREFERENCE_COOKIE_NAME: "stage-edx-language-preference",
-    USER_INFO_COOKIE_NAME: "stage-edx-user-info",
+    ACCESS_TOKEN_COOKIE_NAME: 'stage-edx-jwt-cookie-header-payload',
+    LANGUAGE_PREFERENCE_COOKIE_NAME: 'stage-edx-language-preference',
+    USER_INFO_COOKIE_NAME: 'stage-edx-user-info',
   },
   production: {
     // URLs
@@ -84,7 +84,7 @@ const environments = {
     REFRESH_ACCESS_TOKEN_ENDPOINT: 'https://courses.example.com/login_refresh',
 
     // Misc
-    SITE_NAME: "edX",
+    SITE_NAME: 'edX',
 
     // Paths
     CSRF_TOKEN_API_PATH: '/csrf/api/v1/token',
@@ -92,14 +92,14 @@ const environments = {
     // Cookie names
     ACCESS_TOKEN_COOKIE_NAME: 'edx-jwt-cookie-header-payload',
     LANGUAGE_PREFERENCE_COOKIE_NAME: 'prod-edx-language-preference',
-    USER_INFO_COOKIE_NAME: 'prod-edx-user-info'
-  }
-}
+    USER_INFO_COOKIE_NAME: 'prod-edx-user-info',
+  },
+};
 
 const env = {
   ...environments[DEPLOY_ENV],
   DEPLOY_ENV,
   NODE_ENV,
-}
+};
 
 export default env;
