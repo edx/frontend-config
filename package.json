@@ -1,7 +1,7 @@
 {
-  "name": "@edx/frontend-component-footer",
+  "name": "@edx/frontend-config",
   "version": "1.0.0-semantically-released",
-  "description": "Footer component for use when building Open edX frontend applications",
+  "description": "Frontend configuration template for Open edX micro-frontend applications.",
   "main": "dist/index.js",
   "publishConfig": {
     "access": "public"
@@ -25,14 +25,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/edx/frontend-component-footer.git"
+    "url": "git+https://github.com/edx/frontend-config.git"
   },
   "author": "edX",
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/edx/frontend-component-footer/issues"
+    "url": "https://github.com/edx/frontend-config/issues"
   },
-  "homepage": "https://github.com/edx/frontend-component-footer#readme",
+  "homepage": "https://github.com/edx/frontend-config#readme",
   "devDependencies": {
     "@commitlint/cli": "8.2.0",
     "@commitlint/config-angular": "8.2.0",
