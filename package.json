@@ -1,0 +1,48 @@
+{
+  "name": "@edx/frontend-component-footer",
+  "version": "1.0.0-semantically-released",
+  "description": "Footer component for use when building Open edX frontend applications",
+  "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "make build",
+    "i18n_extract": "BABEL_ENV=i18n fedx-scripts babel src --quiet > /dev/null",
+    "lint": "fedx-scripts eslint --ext .js --ext .jsx .",
+    "snapshot": "fedx-scripts jest --updateSnapshot",
+    "start": "fedx-scripts webpack-dev-server --progress",
+    "test": "fedx-scripts jest --coverage"
+  },
+  "files": [
+    "/dist"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edx/frontend-component-footer.git"
+  },
+  "author": "edX",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/edx/frontend-component-footer/issues"
+  },
+  "homepage": "https://github.com/edx/frontend-component-footer#readme",
+  "devDependencies": {
+    "@commitlint/cli": "8.2.0",
+    "@commitlint/config-angular": "8.2.0",
+    "@commitlint/prompt": "8.2.0",
+    "@commitlint/prompt-cli": "8.2.0",
+    "@edx/frontend-build": "1.1.0",
+    "husky": "3.0.8"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "@edx/paragon": "^7.0.0"
+  }
+}
